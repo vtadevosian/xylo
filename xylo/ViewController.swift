@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -15,16 +16,38 @@ class ViewController: UIViewController {
 
     @IBOutlet var keyButtons: [XyloKeyButton]!
     
+    var player: AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(keyButtons)
-        setUpKeys()
+        setUpKeyColors()
     }
     
-    private func setUpKeys() {
+    @IBAction func keyButtonTapped(_ sender: XyloKeyButton) {
+        if let note = sender.currentTitle {
+            playNote(note)
+        }
+    }
+    
+    private func setUpKeyColors() {
         for i in 0..<8 {
             keyButtons[i].unhighlightedBGColor = unhighlightedKeyColors[i]
             keyButtons[i].highlightedBGColor = highlightedKeyColors[i]
+        }
+    }
+    
+    private func playNote(_ note: String) {
+        guard let url = Bundle.main.url(forResource: note, withExtension: "wav") else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            player.play()
+        } catch let error {
+            print("ERROR WHEN TRYING TO PLAY A SOUND:", error.localizedDescription)
         }
     }
 }
