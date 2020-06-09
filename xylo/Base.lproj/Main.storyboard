@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,251 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="BhN-DF-P1L">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <color key="backgroundColor" red="0.00077589897260273968" green="0.81284781678082196" blue="0.76601270984246583" alpha="0.29056078767123289" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAj-Yp-7FG">
+                                <rect key="frame" x="64" y="120" width="768" height="62"/>
+                                <color key="backgroundColor" red="0.62127752806329484" green="0.49749156410310197" blue="0.36944980046321557" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gej-Eg-2DW">
+                                <rect key="frame" x="64" y="221.5" width="768" height="62"/>
+                                <color key="backgroundColor" red="0.62127752806329484" green="0.49749156410310197" blue="0.36944980046321557" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="y7n-g7-fzn">
+                                <rect key="frame" x="64" y="20" width="768" height="353"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxf-gf-1RZ" userLabel="Left Side View">
+                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="353"/>
+                                        <color key="backgroundColor" red="0.62127752806329484" green="0.49749156410310197" blue="0.36944980046321557" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Spt-Dr-MJP" userLabel="C1 View">
+                                        <rect key="frame" x="77.5" y="0.0" width="72" height="353"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMD-hz-RZx" userLabel="C1 Button" customClass="XyloKeyButton" customModule="xylo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="10" width="72" height="333"/>
+                                                <color key="backgroundColor" red="1" green="0.29411764705882354" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="31"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="nMD-hz-RZx" firstAttribute="leading" secondItem="Spt-Dr-MJP" secondAttribute="leading" id="3vj-jQ-Vrf"/>
+                                            <constraint firstAttribute="bottom" secondItem="nMD-hz-RZx" secondAttribute="bottom" constant="10" id="Adb-SK-jhL"/>
+                                            <constraint firstItem="nMD-hz-RZx" firstAttribute="top" secondItem="Spt-Dr-MJP" secondAttribute="top" constant="10" id="cY0-Vr-3KH"/>
+                                            <constraint firstAttribute="trailing" secondItem="nMD-hz-RZx" secondAttribute="trailing" id="kcK-Es-pEB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRY-KW-nTG" userLabel="D View">
+                                        <rect key="frame" x="154.5" y="0.0" width="72.5" height="353"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZW-ZB-4Tg" userLabel="D Button" customClass="XyloKeyButton" customModule="xylo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="15" width="72.5" height="323"/>
+                                                <color key="backgroundColor" red="1" green="0.6705882352941176" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="31"/>
+                                                <state key="normal" title="D">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="FZW-ZB-4Tg" secondAttribute="bottom" constant="15" id="8Cn-Aq-aOV"/>
+                                            <constraint firstItem="FZW-ZB-4Tg" firstAttribute="top" secondItem="jRY-KW-nTG" secondAttribute="top" constant="15" id="PyH-N7-cEg"/>
+                                            <constraint firstAttribute="trailing" secondItem="FZW-ZB-4Tg" secondAttribute="trailing" id="dxV-Da-7Ho"/>
+                                            <constraint firstItem="FZW-ZB-4Tg" firstAttribute="leading" secondItem="jRY-KW-nTG" secondAttribute="leading" id="mRA-8h-j0I"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWS-nW-6xv" userLabel="E View">
+                                        <rect key="frame" x="232" y="0.0" width="72" height="353"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTl-fh-M95" userLabel="E Button" customClass="XyloKeyButton" customModule="xylo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="25" width="72" height="303"/>
+                                                <color key="backgroundColor" red="1" green="0.90228585023564523" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="31"/>
+                                                <state key="normal" title="E">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="FTl-fh-M95" secondAttribute="trailing" id="62z-P8-e0Q"/>
+                                            <constraint firstItem="FTl-fh-M95" firstAttribute="leading" secondItem="QWS-nW-6xv" secondAttribute="leading" id="WSd-eu-ODW"/>
+                                            <constraint firstItem="FTl-fh-M95" firstAttribute="top" secondItem="QWS-nW-6xv" secondAttribute="top" constant="25" id="qg9-97-Na4"/>
+                                            <constraint firstAttribute="bottom" secondItem="FTl-fh-M95" secondAttribute="bottom" constant="25" id="vdx-b8-3yr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVj-As-zkD" userLabel="F View">
+                                        <rect key="frame" x="309" y="0.0" width="72.5" height="353"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbS-Dt-v9h" userLabel="F Button" customClass="XyloKeyButton" customModule="xylo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="30" width="72.5" height="293"/>
+                                                <color key="backgroundColor" red="0.52807807196493806" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="31"/>
+                                                <state key="normal" title="F">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="bbS-Dt-v9h" secondAttribute="bottom" constant="30" id="6A9-D2-GFI"/>
+                                            <constraint firstItem="bbS-Dt-v9h" firstAttribute="top" secondItem="PVj-As-zkD" secondAttribute="top" constant="30" id="LXa-NL-vaa"/>
+                                            <constraint firstAttribute="trailing" secondItem="bbS-Dt-v9h" secondAttribute="trailing" id="col-yq-8S3"/>
+                                            <constraint firstItem="bbS-Dt-v9h" firstAttribute="leading" secondItem="PVj-As-zkD" secondAttribute="leading" id="dPH-Tb-Pmd"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Rd-pZ-9en" userLabel="G View">
+                                        <rect key="frame" x="386.5" y="0.0" width="72.5" height="353"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X19-Gd-QEU" userLabel="G Button" customClass="XyloKeyButton" customModule="xylo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="40" width="72.5" height="273"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.5626742749324225" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="31"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="X19-Gd-QEU" firstAttribute="leading" secondItem="3Rd-pZ-9en" secondAttribute="leading" id="6WA-hd-Z9G"/>
+                                            <constraint firstAttribute="bottom" secondItem="X19-Gd-QEU" secondAttribute="bottom" constant="40" id="YDY-KT-6W9"/>
+                                            <constraint firstAttribute="trailing" secondItem="X19-Gd-QEU" secondAttribute="trailing" id="h6t-FM-tlH"/>
+                                            <constraint firstItem="X19-Gd-QEU" firstAttribute="top" secondItem="3Rd-pZ-9en" secondAttribute="top" constant="40" id="xCh-Kb-fVY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4YE-Lg-ooQ" userLabel="A View">
+                                        <rect key="frame" x="464" y="0.0" width="72" height="353"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJP-Q5-dy8" userLabel="A Button" customClass="XyloKeyButton" customModule="xylo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="45" width="72" height="263"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.95322716247019557" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="31"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="IJP-Q5-dy8" firstAttribute="leading" secondItem="4YE-Lg-ooQ" secondAttribute="leading" id="F28-nT-Vqy"/>
+                                            <constraint firstAttribute="trailing" secondItem="IJP-Q5-dy8" secondAttribute="trailing" id="YKx-Eh-LBl"/>
+                                            <constraint firstAttribute="bottom" secondItem="IJP-Q5-dy8" secondAttribute="bottom" constant="45" id="Yyg-Ec-MTC"/>
+                                            <constraint firstItem="IJP-Q5-dy8" firstAttribute="top" secondItem="4YE-Lg-ooQ" secondAttribute="top" constant="45" id="aUd-I2-9AN"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-R3-cbL" userLabel="B View">
+                                        <rect key="frame" x="541" y="0.0" width="72.5" height="353"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUn-iV-3qG" userLabel="B Button" customClass="XyloKeyButton" customModule="xylo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="55" width="72.5" height="243"/>
+                                                <color key="backgroundColor" red="0.0" green="0.56558893202857075" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="31"/>
+                                                <state key="normal" title="B">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="cUn-iV-3qG" firstAttribute="top" secondItem="g3f-R3-cbL" secondAttribute="top" constant="55" id="Chv-uj-65s"/>
+                                            <constraint firstAttribute="bottom" secondItem="cUn-iV-3qG" secondAttribute="bottom" constant="55" id="GPT-Ry-Tpi"/>
+                                            <constraint firstItem="cUn-iV-3qG" firstAttribute="leading" secondItem="g3f-R3-cbL" secondAttribute="leading" id="M5s-sa-gJh"/>
+                                            <constraint firstAttribute="trailing" secondItem="cUn-iV-3qG" secondAttribute="trailing" id="u0y-sZ-52Q"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mS-KA-Ipe" userLabel="C2 View">
+                                        <rect key="frame" x="618.5" y="0.0" width="72" height="353"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLA-5z-zrK" userLabel="C2 Button" customClass="XyloKeyButton" customModule="xylo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="60" width="72" height="233"/>
+                                                <color key="backgroundColor" red="0.45322716247019557" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="31"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="hLA-5z-zrK" secondAttribute="bottom" constant="60" id="GCf-pQ-Lhy"/>
+                                            <constraint firstItem="hLA-5z-zrK" firstAttribute="leading" secondItem="7mS-KA-Ipe" secondAttribute="leading" id="PRd-H0-qg1"/>
+                                            <constraint firstItem="hLA-5z-zrK" firstAttribute="top" secondItem="7mS-KA-Ipe" secondAttribute="top" constant="60" id="QnC-FK-65X"/>
+                                            <constraint firstAttribute="trailing" secondItem="hLA-5z-zrK" secondAttribute="trailing" id="qkw-Ke-KCY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sch-hE-045" userLabel="Right Side View">
+                                        <rect key="frame" x="695.5" y="0.0" width="72.5" height="353"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHL-S0-5fQ">
+                                                <rect key="frame" x="0.0" y="55" width="72.5" height="243"/>
+                                                <color key="backgroundColor" red="0.51542526479999995" green="0.39360547070000002" blue="0.28230485319999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="QHL-S0-5fQ" secondAttribute="bottom" constant="55" id="PFP-Na-fOj"/>
+                                            <constraint firstAttribute="trailing" secondItem="QHL-S0-5fQ" secondAttribute="trailing" id="WbW-3Q-yEA"/>
+                                            <constraint firstItem="QHL-S0-5fQ" firstAttribute="leading" secondItem="sch-hE-045" secondAttribute="leading" id="l2x-RI-WaP"/>
+                                            <constraint firstItem="QHL-S0-5fQ" firstAttribute="top" secondItem="sch-hE-045" secondAttribute="top" constant="55" id="ymI-d7-6KB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Spt-Dr-MJP" secondAttribute="bottom" id="XcX-Sm-MsT"/>
+                                    <constraint firstItem="Spt-Dr-MJP" firstAttribute="top" secondItem="y7n-g7-fzn" secondAttribute="top" id="myf-48-WBH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="y7n-g7-fzn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="05L-Er-CaD"/>
+                            <constraint firstItem="BhN-DF-P1L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="148-qf-t4g"/>
+                            <constraint firstAttribute="bottom" secondItem="BhN-DF-P1L" secondAttribute="bottom" id="3Ou-nT-cIo"/>
+                            <constraint firstItem="uAj-Yp-7FG" firstAttribute="leading" secondItem="y7n-g7-fzn" secondAttribute="leading" id="4mV-fv-5Ks"/>
+                            <constraint firstItem="y7n-g7-fzn" firstAttribute="trailing" secondItem="uAj-Yp-7FG" secondAttribute="trailing" id="5vF-2c-45u"/>
+                            <constraint firstItem="gej-Eg-2DW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="25" id="EAe-s3-jNO"/>
+                            <constraint firstItem="gej-Eg-2DW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="GEe-j6-TzT"/>
+                            <constraint firstItem="BhN-DF-P1L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GEi-Dt-h7r"/>
+                            <constraint firstItem="y7n-g7-fzn" firstAttribute="trailing" secondItem="gej-Eg-2DW" secondAttribute="trailing" id="bEi-nc-gDT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y7n-g7-fzn" secondAttribute="trailing" constant="20" id="gV2-KZ-c6M"/>
+                            <constraint firstItem="y7n-g7-fzn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="owd-x8-nLg"/>
+                            <constraint firstItem="uAj-Yp-7FG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="pCa-UA-AqX"/>
+                            <constraint firstAttribute="trailing" secondItem="BhN-DF-P1L" secondAttribute="trailing" id="q8M-g3-8jX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y7n-g7-fzn" secondAttribute="bottom" constant="20" id="u3t-vY-cbs"/>
+                            <constraint firstItem="uAj-Yp-7FG" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-25" id="wJ2-tA-oL9"/>
+                            <constraint firstItem="gej-Eg-2DW" firstAttribute="leading" secondItem="y7n-g7-fzn" secondAttribute="leading" id="x27-vd-RDn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outletCollection property="keyButtons" destination="nMD-hz-RZx" collectionClass="NSMutableArray" id="UKC-eT-ZCo"/>
+                        <outletCollection property="keyButtons" destination="FZW-ZB-4Tg" collectionClass="NSMutableArray" id="IwJ-zv-srm"/>
+                        <outletCollection property="keyButtons" destination="FTl-fh-M95" collectionClass="NSMutableArray" id="eUJ-RC-Fmz"/>
+                        <outletCollection property="keyButtons" destination="bbS-Dt-v9h" collectionClass="NSMutableArray" id="7lW-Og-L4O"/>
+                        <outletCollection property="keyButtons" destination="X19-Gd-QEU" collectionClass="NSMutableArray" id="c1w-M3-g3b"/>
+                        <outletCollection property="keyButtons" destination="IJP-Q5-dy8" collectionClass="NSMutableArray" id="2Wb-wP-9nc"/>
+                        <outletCollection property="keyButtons" destination="cUn-iV-3qG" collectionClass="NSMutableArray" id="51A-AA-e2R"/>
+                        <outletCollection property="keyButtons" destination="hLA-5z-zrK" collectionClass="NSMutableArray" id="uT5-Yq-SCb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.61607142857142" y="137.68115942028987"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="754" height="356"/>
+    </resources>
 </document>
